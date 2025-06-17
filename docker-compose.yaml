@@ -1,0 +1,16 @@
+
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mysql_dev
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 5

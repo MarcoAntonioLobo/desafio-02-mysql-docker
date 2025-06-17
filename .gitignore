@@ -1,0 +1,26 @@
+# Evita que arquivos sensíveis e desnecessários vão para o Git
+
+# Logs e temporários
+*.log
+*.pid
+*.tmp
+
+# Arquivos de ambiente (variáveis sensíveis)
+.env
+.env.*
+
+# Docker
+docker-compose.override.yml
+
+# Volumes e dados locais (caso crie algum volume local)
+mysql_data/
+pgdata/
+volumes/
+
+# IDEs e editores
+.vscode/
+.idea/
+
+# Arquivos temporários comuns
+.DS_Store
+Thumbs.db
